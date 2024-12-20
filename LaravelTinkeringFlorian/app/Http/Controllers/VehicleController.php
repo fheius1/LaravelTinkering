@@ -50,9 +50,10 @@ class VehicleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vehicle $vehicle)
+    public function show($id)
     {
-        //
+        $vehicle = Vehicle::find($id);
+        return view('vehicles.show', compact('vehicle'));
     }
 
     /**
@@ -84,6 +85,13 @@ class VehicleController extends Controller
         return redirect()->route('vehicle.index')->with('success', 'Vehicle actualitzat correctament.');
     }
 
+
+    public function delete($id)
+    {
+        $vehicle = Vehicle::find($id);
+        return view('vehicles.delete', compact('vehicle'));
+    }
+
     /**
      * Remove the specified resource from storage.
      */
@@ -92,6 +100,6 @@ class VehicleController extends Controller
         $vehicle = Vehicle::findOrFail($id);
         $vehicle->delete();
 
-        return redirect()->route('vehicle.index')->with('success', 'Modle eliminat correctament.');
+        return redirect()->route('vehicle.index')->with('success', 'Model eliminat correctament.');
     }
 }

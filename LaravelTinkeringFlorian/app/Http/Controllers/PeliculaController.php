@@ -41,9 +41,8 @@ class PeliculaController extends Controller
 
     Pelicula::create($validatedData);
 
-    return redirect()->route('pelicula.index')->with('success', 'Film added successfully.');
+    return redirect()->route('pelicula.index')->with('success', 'Pel·licula afegida correctament.');
 }
-
 
     /**
      * Display the specified resource.
@@ -80,7 +79,7 @@ class PeliculaController extends Controller
         $pelicula = Pelicula::find($id);
         $pelicula->update($validatedData);
 
-        return redirect()->route('pelicula.index')->with('success', 'Film updated successfully.');
+        return redirect()->route('pelicula.index')->with('success', 'Pel·licula actualitzat correctament.');
 
     }
 
@@ -92,7 +91,7 @@ class PeliculaController extends Controller
         $pelicula = Pelicula::findOrFail($id);
         $pelicula->delete();
 
-        return redirect()->route('pelicula.index')->with('success', 'Film deleted successfully.');
+        return redirect()->route('pelicula.index')->with('success', 'Pel·licula esborrada correctament.');
     }
 
     public function delete($id)
