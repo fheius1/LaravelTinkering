@@ -15,13 +15,13 @@
         <thead>
         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
             <th class="py-3 px-6 text-left">ID</th>
-            <th class="py-3 px-6 text-left">Nom pelicula</th>
-{{--            <th class="py-3 px-6 text-left">Durada</th>--}}
-            <th class="py-3 px-6 text-center">Data estreno</th>
-            <th class="py-3 px-6 text-center">Actions</th>
+            <th class="py-3 ">Nom pelicula</th>
+{{--            <th class="py-3">Durada</th>--}}
+            <th class="py-3">Data estreno</th>
+            <th class="py-3">Actions</th>
         </tr>
         </thead>
-        <tbody class="text-gray-600 text-sm font-light">
+        <tbody class="text-black text-sm font-light">
         @if ($films->isEmpty())
             <tr>
                 <td colspan="5" class="py-3 px-6 text-center">No hi ha pelis disponibles.</td>
@@ -34,9 +34,9 @@
 {{--                    <td class="py-3 px-6">{{ $film->Durada }}</td>--}}
                     <td class="py-3 px-6 text-center">{{ $film->Data_estreno }}</td>
                     <td class="py-3 px-6 text-center">
-                        <a href="{{ route('pelicula.show', $film->id) }}" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">Show</a>
-                        <a href="{{ route('pelicula.edit', $film->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700">Edit</a>
-                        <a href="{{ route('pelicula.delete', $film->id) }}" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-yellow-700">Delete</a>
+                        <a href="{{ route('pelicula.show', $film->id) }}" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">Detalls</a>
+                        <a href="{{ route('pelicula.edit', $film->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700">Editar</a>
+                        <a href="{{ route('pelicula.delete', $film->id) }}" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">Esborrar</a>
 
                     </td>
                 </tr>
@@ -45,6 +45,6 @@
         </tbody>
     </table>
 </div>
-@include('layout.footer')
 </body>
+@include('layout.footer')
 </html>

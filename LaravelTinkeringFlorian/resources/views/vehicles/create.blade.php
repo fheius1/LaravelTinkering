@@ -30,21 +30,15 @@
         </div>
         <div class="mb-4">
             <label for="preu" class="block text-gray-700">Preu del model:</label>
-            <input
-                type="number"
-                id="preu"
-                name="preu"
-                step="0.01"
-                class="w-full px-3 py-2 border rounded"
-                required>
-
+            <input type="number" id="preu" name="preu" step="0.01" class="w-full px-3 py-2 border rounded"required>
         </div>
         <div class="mb-4">
             <label for="info_adicional" class="block text-gray-700">Informacio adicional:</label>
             <input type="text" id="info_adicional" name="info_adicional" class="w-full px-3 py-2 border rounded">
         </div>
-        <div class="flex justify-end">
+        <div class="flex justify-end space-x-4">
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Guardar</button>
+            <a href="/vehicle" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700">Tornar a la taula</a>
         </div>
     </form>
 </div>

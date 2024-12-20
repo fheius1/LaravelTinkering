@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Film</title>
+    <title>Editar pel·licula</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 p-8">
 @include('layout.navbar')
 <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-    <h1 class="text-3xl font-bold mb-4">Edit Film</h1>
+    <h1 class="text-3xl font-bold mb-4">Editar pel·licula</h1>
     <form action="{{ route('pelicula.update', $pelicula->id) }}" method="POST">
         @csrf
         @method('PUT')
@@ -35,7 +35,7 @@
             <input type="date" id="Data_estreno" name="Data_estreno" class="w-full px-3 py-2 border rounded" value="{{ $pelicula->Data_estreno }}" required>
         </div>
         <div class="flex justify-end">
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Update</button>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Actualitzar</button>
         </div>
     </form>
 </div>

@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProjectePHP</title>
+    <title>ProjecteLaravel</title>
 </head>
 <body>
 <header>
     @include('layout.navbar')
-    <h1>Projecte Florian Heius</h1>
+    <h1>Projecte Laravel Florian Heius</h1>
 </header>
 
 <section id="about">
     <h2>Sobre el projecte</h2>
     <p>En este projecte utilitzarem dos taules , la primera sobre pel·licules i la segona sobre models de vehicles.
-        A les dos taules es permetra fer el CRUD per la gestio de les seves dades
+        A les dos taules es permetra fer el CRUD per la gestio de les seves dades utilitzant laravel-tinkering
     </p>
 </section>
 
@@ -22,7 +22,7 @@
     <h2>Caracteristiques principals</h2>
     <ul>
         <li><strong>Gestio de pel·licules:</strong> Creacio , edicio y eliminacio de pel·licules.</li>
-        <li><strong>Gestio de models:</strong> Administracio per a models de vehicles.</li>
+        <li><strong>Gestio de vehicles:</strong> Administracio per a models de vehicles.</li>
     </ul>
 </section>
 
@@ -32,9 +32,7 @@
     <a href="{{ route('pelicula.index') }}" class="button">Pel·licules</a>
     <a href="{{ route('vehicle.index') }}" class="button">Vehicles</a>
 </section>
-<footer>
-    <p>&copy; 2024 ProjectePHP. Florian Heius</p>
-</footer>
+@include('layout.footer')
 </body>
 </html>
 
